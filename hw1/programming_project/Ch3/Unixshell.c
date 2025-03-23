@@ -95,12 +95,35 @@ void executeCommandEntry(char *const *args, int pipefd_parent[2]) {
 void parse_execute(char *input) {
     add_to_history(input);
     char *args[MAX_ARGS];
-    char *token = strtok(input, " ");
-    int i = 0;
-
-    while (token != NULL) {
+    char *token;
+    int i = 0, j = 0;
+    while (input[j] != '\0') {
+        while (input[j] == ' ') {
+            j++;
+        }
+        if (input[j] == '\0') {
+            break;
+        }
+        if (input[j] == '"') {
+            j++;
+            token = &input[j];
+            while (input[j] != '"' && input[j] != '\0') {
+                j++;
+            }
+            if (input[j] != '\0') {
+                input[j++] = '\0';
+            }
+            args[i++] = token;
+            continue;
+        }
+        token = &input[j];
+        while (input[j] != ' ' && input[j] != '\0') {
+            j++;
+        }
+        if (input[j] != '\0') {
+            input[j++] = '\0';
+        }
         args[i++] = token;
-        token = strtok(NULL, " ");
     }
     args[i] = NULL;
 
