@@ -24,7 +24,7 @@
 > 檢查參數正確、是否有來源檔案，目的檔案名稱是否重複等功能。  
 > 使用 `strace` 之檢查檔案為 `trace_log.txt` 。
 
-[!img1](./image1.png)
+![img1](./image2.png)
 
 ### problem 3.19
 
@@ -33,8 +33,8 @@
 > 編譯方式為 `g++ time.c -o time` ，以 `time.c` 為例。  
 > `./time <command> [args]` 為使用方法，像是 `./time ls` 。  
 
-[!img2](./image2.png)
-[!img4](./image4.png)
+![img2](./image1.png)  
+![img4](./image4.png)
 
 ### problem 3.20
 
@@ -53,7 +53,8 @@
 > 使用方法同 `problem 2.24` 。    
 > 檢查參數正確、是否有來源檔案，目的檔案名稱是否重複等功能。  
 
-[!img3](./image3.png)  
+
+![img3](./image3.png)  
 
 ## Programming_project
 
