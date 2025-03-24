@@ -52,4 +52,3 @@ module_exit(jiffies_exit);
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Jiffies Module");
-MODULE_AUTHOR("TWJL");
