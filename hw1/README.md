@@ -24,12 +24,17 @@
 > 檢查參數正確、是否有來源檔案，目的檔案名稱是否重複等功能。  
 > 使用 `strace` 之檢查檔案為 `trace_log.txt` 。
 
+[!img1](./image1.png)
+
 ### problem 3.19
 
 > [!TIP]  
 > 檔名為 `time.c` 及 `time_v2.c`。  
 > 編譯方式為 `g++ time.c -o time` ，以 `time.c` 為例。  
 > `./time <command> [args]` 為使用方法，像是 `./time ls` 。  
+
+[!img2](./image2.png)
+[!img4](./image4.png)
 
 ### problem 3.20
 
@@ -38,6 +43,8 @@
 > 編譯方式為 `make install_gtest` ，如果安裝完後再下 `make` ，輸出檔案在 `output` 資料夾裡面。  
 > `./test_pid_manager` 為使用方法，輸出由 `gtest` 生成之測試結果檔。
 
+
+
 ### problem 3.27
 
 > [!TIP]  
@@ -45,6 +52,8 @@
 > 編譯方式為 `g++ filecopy.c -o filecopy`。  
 > 使用方法同 `problem 2.24` 。    
 > 檢查參數正確、是否有來源檔案，目的檔案名稱是否重複等功能。  
+
+[!img3](./image3.png)
 
 ## Programming_project
 
