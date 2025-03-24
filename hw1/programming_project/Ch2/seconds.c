@@ -55,4 +55,3 @@ module_exit(seconds_exit);
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Seconds Module");
-MODULE_AUTHOR("TWJL");
