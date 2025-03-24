@@ -29,7 +29,8 @@
 ### problem 3.19
 
 > [!TIP]  
-> 檔名為 `time.c` 及 `time_v2.c`。  
+> 檔名為 `time.c` 及 `time_v2.c`。
+> `time.c` 是 `shared_memory` ， `time_v2.c` 是 `pipe` 。
 > 編譯方式為 `g++ time.c -o time` ，以 `time.c` 為例。  
 > `./time <command> [args]` 為使用方法，像是 `./time ls` 。  
 
@@ -40,8 +41,8 @@
 
 > [!TIP]  
 > 檔案在 `pid_manager` 內，包含相關測試檔，主要是 `pid_manager` 開頭檔案 。  
-> 編譯方式為 `make install_gtest` ，如果安裝完後再下 `make` ，輸出檔案在 `output` 資料夾裡面。  
-> `./test_pid_manager` 為使用方法，輸出由 `gtest` 生成之測試結果檔。
+> 編譯方式為 `make install_gtest` ，如果安裝完後再下 `make` ，輸出檔案在 `output` 資料夾裡面，以便發生不測之時可以使用。  
+> `./test_pid_manager` 為使用方法，輸出由 `gtest` 生成之測試結果檔，測試之結果檔較為簡陋。
 
 ![img5](./image5.png)  
 
