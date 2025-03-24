@@ -43,7 +43,7 @@
 > 編譯方式為 `make install_gtest` ，如果安裝完後再下 `make` ，輸出檔案在 `output` 資料夾裡面。  
 > `./test_pid_manager` 為使用方法，輸出由 `gtest` 生成之測試結果檔。
 
-[!img5](./image5.png)  
+![img5](./image5.png)  
 
 ### problem 3.27
 
