@@ -53,7 +53,7 @@
 > 使用方法同 `problem 2.24` 。    
 > 檢查參數正確、是否有來源檔案，目的檔案名稱是否重複等功能。  
 
-[!img3](./image3.png)
+![img3](./image3.png)  
 
 ## Programming_project
 
