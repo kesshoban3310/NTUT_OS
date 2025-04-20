@@ -34,6 +34,7 @@
 
 ### How to use
 
+> [!TIP] 
 > 使用 `java Schedule <argument>` 執行編譯後的程式。  
 > `<argument>` 包含以下內容：  
 > `FCFS`代表 `FCFS (First come first surve)`  
