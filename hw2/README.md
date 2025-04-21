@@ -2,8 +2,8 @@
 
 > [!NOTE]  
 > 在本次作業中有許多程式作業與手寫作業。  
-> `111590004_handwrite.pdf` 是本人的手寫作業
-> `programming_problem` 是本人的程式作業。
+> `111590004_handwrite.pdf` 是本人的手寫作業。  
+> `programming_problem` 是本人的程式作業。  
 > `programming_project` 是團體程式作業，裡面有一個 `README.md` 是團體程式作業的文件。  
 
 
