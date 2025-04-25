@@ -101,6 +101,7 @@ gcc -o sudoku_validator sudoku_validator.c -lpthread
 > - RR (Round Robin)
 > - Priority
 > - Priority with RR  
+>     - 在這裡，我們將同一個 `priority` 的東西都用 `RR` 處理，即使裡面剩一個 `Process` ，所以他有可能一個 `process` 會跑很多次。
 >   `Priority` 數字越大越優先， `RR` 的 `Quantum` 為 `10` 。  
 >   `Priority` 的數字 `1~10` ， 時間最大為 `100` 。  
 >   以上皆參考至 `OS` 老師指定之教科書內容。

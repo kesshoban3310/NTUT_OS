@@ -131,40 +131,32 @@ public class Schedule {
         System.out.println("Total time is:"+t);
     }
     private static void PriorityWithRR(Vector<Triple> a){
-        PriorityQueue<Triple> queue = new PriorityQueue<>(
-                (x, y) -> {
-                    // 先比較優先級，較大的優先級排在前面
-                    int priorityCompare = Integer.compare(y.priority, x.priority);
-                    if (priorityCompare != 0) {
-                        return priorityCompare;  // 如果優先級不同，直接返回結果
-                    }
-                    // 如果優先級相同，則比較 time，較短的 time 排在前面（SJF）
-                    return Integer.compare(x.time, y.time);  // 這裡是 SJF 比較，時間較短的優先
-                }
-        );
+
+        LinkedList<Triple>[] queue = new LinkedList[11];
+
+        for (int i = 0; i <= 10; i++) {
+            queue[i] = new LinkedList<>();
+        }
+
         for(int i = 0; i < a.size(); i++){
-            queue.add(new Triple(a.get(i).task, a.get(i).time, a.get(i).priority));
+            queue[a.get(i).priority].add(new Triple(a.get(i).task, a.get(i).time, a.get(i).priority));
         }
         int t = 0;
 
         System.out.println("Starting Execute by Priority With RR:");
         String ans = "";
-        while (!queue.isEmpty()){
-            int size = queue.size();
-            Queue<Triple> st = new LinkedList<>();
-            for(int i = 0; i < size; i++){
-                Triple tmp = queue.poll();
-                if(tmp.time <= 0){
+
+        for(int i = 0; i < queue.length; i++){
+            while (!queue[i].isEmpty()){
+                Triple tmp = queue[i].poll();
+                t+=Math.min(tmp.time, 10);
+                tmp.time -= 10;
+                ans += tmp.task;
+                ans+=",";
+                if(tmp.time<=0){
                     continue;
                 }
-                ans+=tmp.task;
-                t += Math.min(tmp.time, 10);
-                tmp.time -= 10;
-                ans+=",";
-                st.add(tmp);
-            }
-            while(!st.isEmpty()){
-                queue.add(st.poll());
+                queue[i].add(tmp);
             }
         }
         ans = ans.substring(0, ans.length() - 1);
