@@ -146,7 +146,7 @@ public class Schedule {
         System.out.println("Starting Execute by Priority With RR:");
         String ans = "";
 
-        for(int i = 0; i < queue.length; i++){
+        for(int i = queue.length - 1; i >= 0; i--){
             while (!queue[i].isEmpty()){
                 Triple tmp = queue[i].poll();
                 t+=Math.min(tmp.time, 10);
