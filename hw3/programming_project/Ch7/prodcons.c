@@ -50,6 +50,12 @@ void *consumer(void *arg) {
 void stop_execution(int signum) {
     (void)signum; // Mark parameter as unused
     running = 0;
+    for (int i = 0; i < NUM_PRODUCERS; i++) {
+        sem_post(&empty); // 防止 producer 卡住
+    }
+    for (int i = 0; i < NUM_CONSUMERS; i++) {
+        sem_post(&full);  // 防止 consumer 卡住
+    }
 }
 
 int main() {
