@@ -142,8 +142,8 @@ gcc -pthread -o ta_stu ta_stu.c
 
 # 組員名單及貢獻度
 
-- 111590004 張意昌，進行 `Ch7 Producer Consumer Problem` 程式撰寫。[25%]
+- 111590004 張意昌，進行 `Ch7 Sleeping TA Problem` 程式以及說明文件撰寫。[25%]
 - 111590011 吳耀東，進行 `Ch8 Banker’s Algorithm` 撰寫程式和使用文件。[25%]
 - 111590012 林品緯，進行 `Ch9 Contiguous Memory Allocation` 撰寫程式和使用文件。[25%]
-- 111590028 張睿恩，進行 `Ch7 Dining Philosophers Problem` 程式撰寫。[25%]
+- 111590028 張睿恩，進行 `Ch7 Dining Philosophers Problem & Producer Consumer Problem` 程式撰寫。[25%]
 - 每人貢獻皆為 `25%` ，總共為 `100%` 。
