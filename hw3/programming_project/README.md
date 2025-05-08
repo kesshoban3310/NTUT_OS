@@ -44,6 +44,8 @@ gcc -pthread -o ta_stu ta_stu.c
 > 結果保留在 `pro_res.txt` 內，因為輸出內容太多所以截圖把他導出到這裡  
 > Producer 1 produced: 42 Producer ，代表執行緒 #1 產生了數字 42 並成功放入 buffer  
 > Consumer 2 consumed: 42 Consumer ，代表執行緒 #2 成功從 buffer 中取出並處理了數字 42
+> 此問題的目的在於模擬生產者與消費者，對於 `Buffer` 數量進行管理  
+> 盡可能讓生產者有多餘的 `buffer` 生產資源，讓消費者有無限的資源可以消耗  
 
 ### 哲學家用餐問題
 
@@ -55,6 +57,8 @@ gcc -pthread -o ta_stu ta_stu.c
 > Philosopher 0: EATING 🍽️ ，代表哲學家在吃飯  
 > Philosopher 1: THINKING 🤔 ，代表哲學家在思考  
 > Philosopher 2: HUNGRY   🙏 ，代表哲學家在飢餓(有可能筷子被占用沒辦法吃飯，所以很餓)    
+> 此問題的目的在於模擬哲學家的生活，對於筷子這種會發生 `race condition` 的資源，我們要進行同步  
+> 避免所有哲學家餓死  
 
 ### 打瞌睡助教問題
 ![CH7_IMG5](./Ch7/ta_stu_exe.png)
@@ -62,6 +66,8 @@ gcc -pthread -o ta_stu ta_stu.c
 
 > [!IMPORTANT]  
 > 結果保留在 `ta_stu_res.txt` 內，因為輸出內容太多所以截圖把他導出到這裡  
+> 此問題的目的在於模擬助教以及學生，對於助教這種有限的資源進行管理  
+> 避免多位學生搶占助教，導致 `race condition` 的狀況發生  
 > 以下是可能的結果  
 ```
 [TA] 幫助一位學生，剩下 0 位學生等候中
